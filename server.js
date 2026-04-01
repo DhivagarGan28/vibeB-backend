@@ -18,13 +18,16 @@ app.use(
      cors({
           origin: "http://localhost:5173",
           credentials: true,
+     },
+     {
+         origin:"https://vibe-b.netlify.app",
+         credentials:true, 
      })
 );
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 
-// Health
 app.get('/', (req, res) => res.json({ ok: true, message: 'VibeB API running' }));
 
 app.listen(PORT, () => {

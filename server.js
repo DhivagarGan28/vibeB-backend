@@ -79,10 +79,14 @@ app.post('/aichatbot', async (req, res) => {
         message: data.error?.message || 'OpenAI request failed'
       });
     }
-
+    for(let val of data){
+        if(data['type'] == 'message' && data['status'] == 'complete'){
+          var output = data['content']
+        }
+    }
     res.json({
       success: true,
-      result: data.output
+      result: output
     });
 
   } catch (err) {

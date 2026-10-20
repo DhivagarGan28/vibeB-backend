@@ -22,10 +22,8 @@ app.use(cors({
     'https://vibe-b.netlify.app',
     'http://localhost:4200',
     'https://vibeb-backend.onrender.com',
-    'https://my-portfolio-dhivagar.netlify.app/'
+    'https://my-portfolio-dhivagar.netlify.app'
   ],
-  methods: ["GET", "POST", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
 }));
 

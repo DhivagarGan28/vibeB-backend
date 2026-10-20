@@ -82,8 +82,8 @@ app.post('/aichatbot', async (req, res) => {
     var output;
     let arr = data.output;
     for(let val in arr){
-        if(data[val]['type'] == 'message' && data[val]['status'] == 'complete'){
-          output = data[val]['content']
+        if(arr[val]['type'] == 'message' && arr[val]['status'] == 'complete'){
+          output = arr[val]['content']
         }
     }
     res.json({

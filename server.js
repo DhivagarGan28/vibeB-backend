@@ -89,7 +89,6 @@ app.post('/aichatbot', async (req, res) => {
     res.json({
       success: true,
       result: output,
-      data:data.output
     });
 
   } catch (err) {

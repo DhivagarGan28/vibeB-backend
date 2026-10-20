@@ -24,13 +24,14 @@ app.use(cors({
     'https://vibeb-backend.onrender.com',
     'https://my-portfolio-dhivagar.netlify.app/'
   ],
-  credentials: true
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
 }));
 
-// Existing authentication routes
 app.use('/api/auth', require('./routes/auth'));
 
-// Health check
+
 app.get('/', (req, res) => {
   res.json({
     ok: true,
@@ -38,7 +39,7 @@ app.get('/', (req, res) => {
   });
 });
 
-// AI chatbot route
+
 app.post('/aichatbot', async (req, res) => {
   try {
     const { message } = req.body;
@@ -95,7 +96,7 @@ app.post('/aichatbot', async (req, res) => {
   }
 });
 
-// Start server
+
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });

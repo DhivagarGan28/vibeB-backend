@@ -82,7 +82,7 @@ app.post('/aichatbot', async (req, res) => {
     var output;
     let arr = data.output;
     for(let val in arr){
-        if(arr[val]['type'] == 'message' && arr[val]['status'] == 'complete'){
+        if(arr[val]['type'] == 'message' && arr[val]['status'] == 'completed'){
           output = arr[val]['content']
         }
     }

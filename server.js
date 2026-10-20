@@ -21,7 +21,8 @@ app.use(cors({
     'http://localhost:5173',
     'https://vibe-b.netlify.app',
     'http://localhost:4200',
-    'https://vibeb-backend.onrender.com'
+    'https://vibeb-backend.onrender.com',
+    'https://my-portfolio-dhivagar.netlify.app/'
   ],
   credentials: true
 }));
